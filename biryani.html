@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Food List</title>
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(67, 66, 66, 0.5)), url('https://png.pngtree.com/thumb_back/fw800/background/20240328/pngtree-healthy-thai-food-recipes-concept-image_15645273.jpg');
+    background-size: 100% auto;
+  background-position:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.food-container {
+    background:url('https://png.pngtree.com/thumb_back/fw800/background/20240328/pngtree-healthy-thai-food-recipes-concept-image_15645273.jpg');
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgb(2, 2, 2);
+  text-align: center;
+  position: relative;
+  width: 300px;
+  
+}
+h1{
+  font-family: "Kaushan Script", serif;
+  background-color: #ffffff;
+  -webkit-text-fill-color: rgb(0, 0, 0) ;
+}
+
+
+.food-list {
+  list-style-type: none;
+  
+  padding: 0;
+}
+
+.food-item {
+
+  background-color: #ffffff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.food-item:hover {
+  background-color: #ffffff;
+}
+ </style>
+</head>
+<body>
+  <div class="food-container">
+ <h1>What's New</h1>
+    <ul class="food-list">
+      <li class="food-item">Fish biryani </li>
+      <li class="food-item">Chicken Biryani</li>
+      <li class="food-item">Veg Biryani</li>
+      <li class="food-item">Beef Biryani</li>
+    </ul>
+  </div>
+</body

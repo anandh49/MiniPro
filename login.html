@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   
+    <head>    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Login</title>
+        <style>         
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    
+            body {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      display:   
+          flex;   
+          justify-content: center;   
+          align-items: center;  
+          min-height: 100vh;  
+          background: linear-gradient(to right,
+                #EC6EAD, #781eff, #16d4ff);
+            }
+            .flash {
+                max-width: 100%;
+            height: auto;
+            position: absolute;
+            top:20%;
+            left:670px;  
+           
+            text-decoration: underline;
+            -webkit-text-fill-color:rgb(255, 255, 255);
+            border-radius:20px;
+            }
+            
+            h2 {
+                font-family: "Pacifico", serif;
+                text-decoration:underline;
+                background-image: linear-gradient(45deg, #000000, #000000);
+                -webkit-background-clip: text;
+                 background-clip: text; 
+                position: absolute;
+                top: 28%;
+                left: 52%;
+                transform: translateX(-50%);
+                text-align: center
+            }
+
+            form {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+                margin-top: 25px;
+                border-radius:4px;
+            }
+
+            form div {
+                margin-bottom: 9%;
+            }
+
+            label {
+                font-size: 14px;
+                color: #555;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #000000;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input:focus {
+                outline: none;
+                border-color: #007bff;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background: linear-gradient(to right,
+                #EC6EAD, #781eff, #16d4ff);
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            
+           
+            a {
+                display: block;
+                border: none;
+                font-size: 16px;
+                color: #000000;
+               margin-left:-23%;
+               margin-top:20%;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+            img{
+            max-width: 100%;
+            background-color: transparent;
+            height: 100p;
+            position: absolute;
+            top:30%;
+            left:820px;
+            }
+            .name{
+                font-family: "Pacifico", serif;
+                -webkit-text-fill-color: #ffffff;
+                 background-clip: text; 
+                position: absolute;
+                font-size:30px;
+                top: 2%;
+                left: 52%;
+                transform: translateX(-50%);
+                text-align: center
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="name">
+            <h1>Recipe Book!</h1>
+        </div>
+        <div class="flash">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                    <ul>
+                    {% for category, message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+            {% endif %}
+        {% endwith %}
+        </div>
+       
+        <h2> Login</h2>
+   
+        <form method="POST" action="/login">
+            <div class="img">
+                <img src="https://thumbs.dreamstime.com/b/recipe-book-icon-trendy-logo-concept-white-backg-background-kitchen-collection-suitable-use-web-apps-mobile-print-131157627.jpg"
+                 width="50">
+                </div>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <br>
+        <a href="/register">Don't have an account? Register here</a>
+    </body>
+</html>
